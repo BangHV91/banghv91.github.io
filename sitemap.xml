@@ -7,4 +7,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://laurencewho.com/?lang=it"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://laurencewho.com/"/>
   </url>
+  <url>
+    <loc>https://laurencewho.com/press/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurencewho.com/press/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://laurencewho.com/press/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurencewho.com/press/"/>
+  </url>
 </urlset>
