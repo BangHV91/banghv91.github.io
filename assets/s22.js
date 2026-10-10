@@ -1,0 +1,7 @@
+(function(){var st=document.createElement('style');st.textContent='.lw-pl{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 24px 14px;padding:12px 2px;border-top:1px solid rgba(127,127,127,.3);border-bottom:1px solid rgba(127,127,127,.3);color:inherit!important;text-decoration:none!important;font:500 15px/1.2 Helvetica,"Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em;-webkit-tap-highlight-color:transparent}.lw-pl small{font-weight:300;font-size:12px;opacity:.55}.lw-pl:focus-visible{outline:2px solid currentColor;outline-offset:2px}';document.head.appendChild(st);
+var it=function(){return document.documentElement.lang==='it'};
+function mk(panelId,href,en,it_,suben,subit){var p=document.getElementById(panelId);if(!p)return;var a=document.createElement('a');a.className='lw-pl';a.href=href;p.appendChild(a);
+function tx(){a.innerHTML=(it()?it_:en)+' <small>'+(it()?subit:suben)+' →</small>'}tx();
+function top(){var after=p.querySelector(':scope>.lw-ih')||p.querySelector(':scope>.place-head');var want=after?after.nextElementSibling:p.firstElementChild;if(want!==a)p.insertBefore(a,after?after.nextSibling:p.firstChild)}top();
+new MutationObserver(function(){top()}).observe(p,{childList:true});new MutationObserver(tx).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}
+mk('help-panel','/press/','press kit','cartella stampa','cv, bio, photo, logo','cv, bio, foto, logo');})();
