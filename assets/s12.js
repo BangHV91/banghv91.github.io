@@ -1,0 +1,8 @@
+(function(){var b=document.getElementById('lw-back'),h=document.getElementById('lw-hero');if(!b||!h)return;b.onclick=function(){h.hidden=false;document.body.classList.add('lw-hero-on');window.__lwHeroFit&&window.__lwHeroFit();requestAnimationFrame(function(){requestAnimationFrame(function(){h.classList.remove('gone');});});};
+var it=function(){return document.documentElement.lang==='it'};new MutationObserver(function(){var l=it()?'torna all’inizio':'back to the start';b.setAttribute('aria-label',l);b.title=l;}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+/* a11y: map labels reachable by keyboard */
+function k(){document.querySelectorAll('#town .poi.main').forEach(function(g){if(g.hasAttribute('tabindex'))return;g.setAttribute('tabindex','0');g.setAttribute('role','button');var n=g.querySelector('.name:not(.lw-halo)');n&&g.setAttribute('aria-label',n.textContent);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();g.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});});
+var hb=document.querySelector('#lw-hero .lw-bg'),hf=document.querySelector('#lw-hero .lw-fg');hb&&hb.setAttribute('role','img');hb&&hb.setAttribute('aria-label','Laurence Who in a hat, black and white, above a blurred crowd');hf&&hf.setAttribute('aria-hidden','true');
+var s=document.querySelector('.lw-search input');s&&!s.getAttribute('aria-label')&&s.setAttribute('aria-label',s.placeholder);
+document.querySelectorAll('img:not([alt])').forEach(function(i){i.alt='';});document.querySelectorAll('button:not([aria-label])').forEach(function(x){if(!x.textContent.trim()&&x.title)x.setAttribute('aria-label',x.title);});}
+k();setTimeout(k,1500);setTimeout(k,4000);})();
