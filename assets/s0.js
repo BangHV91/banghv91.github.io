@@ -1,0 +1,4 @@
+(function(){var els=null,last=[0,0];function q(){els=[].slice.call(document.querySelectorAll('#town,.map-backdrop,.map-layer,.map-raster'))}
+window.__lwPan=function(x,y,k){if(!els||!els.length||!els[0].isConnected)q();last=[x,y];var t='translate3d('+x+'px,'+y+'px,0)';for(var i=0;i<els.length;i++)els[i].style.transform=t;
+if(!document.documentElement.classList.contains('dragging')){var o=document.documentElement.style;o.setProperty('--px',x+'px');o.setProperty('--py',y+'px');o.setProperty('--mx',(x/k).toFixed(1)+'px');o.setProperty('--my',(y/k).toFixed(1)+'px')}};
+new MutationObserver(function(){if(!document.documentElement.classList.contains('dragging')&&els){var o=document.documentElement.style;o.setProperty('--px',last[0]+'px');o.setProperty('--py',last[1]+'px')}}).observe(document.documentElement,{attributes:true,attributeFilter:['class']});})();
