@@ -1,0 +1,1 @@
+(function(){var D=document.documentElement,m=document.querySelector('meta[name="color-scheme"]');if(!m)return;function u(){m.content=D.classList.contains("night")?"only dark":"only light"}u();new MutationObserver(u).observe(D,{attributes:true,attributeFilter:["class"]})})();
