@@ -4,7 +4,7 @@ it:{title:'Per strada',by:'di laurence who',desc:'Un brano semplice ma intenso s
 var L=function(){return T[document.documentElement.lang==='it'?'it':'en']};
 var st=document.createElement('style');st.textContent=
 '.lw-mp{position:fixed;right:68px;bottom:calc(var(--vis-gap,0px) + 20px);margin-bottom:env(safe-area-inset-bottom,0px);z-index:70;height:44px;display:flex;align-items:center;gap:2px;padding:0 6px;border:1px solid #000;border-radius:22px;background:#fff;color:#000;font-family:Helvetica,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .8s ease}'+
-'.lw-mp.on{opacity:1;pointer-events:auto}body.lw-hero-on .lw-mp{opacity:0;pointer-events:none}'+
+'.lw-mp.on{opacity:1;pointer-events:auto}body.lw-hero-on .lw-mp,.lw-mp.off{opacity:0!important;pointer-events:none!important;visibility:hidden}'+
 '.lw-mp button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;-webkit-tap-highlight-color:transparent}'+
 '.lw-mp button:focus-visible{outline:2px solid currentColor}.lw-mp svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}'+
 '.lw-mp .wv{width:64px;height:32px;border-radius:16px}.lw-mp .wv svg{width:64px;height:20px;stroke-width:1.2}'+
@@ -23,6 +23,8 @@ c.innerHTML='<div class="k">'+t.now+'</div><h2>'+t.title+'</h2><div class="by">'
 function openGallery(){var g=[].slice.call(document.querySelectorAll('.poi.main')).find(function(x){return /^galler/i.test(x.getAttribute('aria-label')||'')});if(g)g.dispatchEvent(new MouseEvent('click',{bubbles:true}))}
 function place(){var b=document.querySelector('.night-btn');if(!b)return;var r=b.getBoundingClientRect();if(!r.height)return;var h=Math.round(r.height);m.style.height=h+'px';m.style.boxSizing='border-box';m.style.borderRadius=h/2+'px';m.style.bottom='auto';m.style.top=r.top+'px';m.style.right=(innerWidth-r.left+8)+'px';m.style.marginBottom='0';c.style.bottom='auto';c.style.top='auto';c.style.right=(innerWidth-r.right)+'px';c.style.bottom=(innerHeight-r.top+10)+'px';c.style.marginBottom='0'}
 addEventListener('resize',place);window.visualViewport&&visualViewport.addEventListener('resize',place);setInterval(place,1000);
+function vis(){var o=document.querySelector('[id$="-overlay"].is-open,.overlay-layer.is-open,#cv-overlay.is-open,#timeline-overlay.is-open');m.classList.toggle('off',!!o);if(o&&!c.hidden){c.hidden=true}}
+new MutationObserver(vis).observe(document.body,{attributes:true,attributeFilter:['class'],subtree:true});
 var ctx,gain;
 function fade(to,ms){if(gain){var n=ctx.currentTime;gain.gain.cancelScheduledValues(n);gain.gain.setValueAtTime(gain.gain.value,n);gain.gain.linearRampToValueAtTime(to,n+ms/1000)}}
 function graph(){if(ctx)return;try{var AC=window.AudioContext||window.webkitAudioContext;ctx=new AC();var s=ctx.createMediaElementSource(a);gain=ctx.createGain();gain.gain.value=0;s.connect(gain);gain.connect(ctx.destination)}catch(e){ctx=null;gain=null}}
