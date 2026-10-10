@@ -1,4 +1,4 @@
-(function(){var h=document.getElementById('lw-hero');if(!h)return;var t=h.querySelector('h1'),x=document.getElementById('lw-explore');
+(function(){var h=document.getElementById('lw-hero');if(!h)return;var t=h.querySelector('.lw-h1'),x=document.getElementById('lw-explore');
 function s(){var it=document.documentElement.lang==='it';if(t&&t.firstChild)t.firstChild.textContent=it?'produttore creativo multidisciplinare':'multidisciplinary creative producer';if(x&&x.firstChild)x.firstChild.textContent=it?'esplora ':'explore more ';x&&x.setAttribute('lang',it?'it':'en');
 if(!h.hidden&&window.__lwHeroFit)requestAnimationFrame(window.__lwHeroFit);}
 s();new MutationObserver(s).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});})();
