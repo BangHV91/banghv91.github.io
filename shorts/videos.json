@@ -1,0 +1,34 @@
+{
+ "channel": "https://www.youtube.com/@laurencewho",
+ "updated": "2026-10-11",
+ "videos": [
+  {
+   "id": "3YE9aU7XUyk",
+   "title": "Somewhere In My Heart /// Ives Trio",
+   "duration": 539,
+   "kind": "video",
+   "thumbnail": "thumbs/3YE9aU7XUyk.webp"
+  },
+  {
+   "id": "HXEsSv-3IqI",
+   "title": "Per strada",
+   "duration": 305,
+   "kind": "video",
+   "thumbnail": "thumbs/HXEsSv-3IqI.webp"
+  },
+  {
+   "id": "GrEhUBpnNxM",
+   "title": "En Blanc Et Noir - Short film (2024)",
+   "duration": 284,
+   "kind": "video",
+   "thumbnail": "thumbs/GrEhUBpnNxM.webp"
+  },
+  {
+   "id": "NCwKG-BC6_o",
+   "title": "Laurence Who: Paradis i Ander Reus (2019), for piano solo [improvisation]",
+   "duration": 2690,
+   "kind": "video",
+   "thumbnail": "thumbs/NCwKG-BC6_o.webp"
+  }
+ ]
+}
